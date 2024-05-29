@@ -21,12 +21,9 @@ class AppRouter {
           builder: (_) => const HomeScreen(),
         );
       default:
+      
         return MaterialPageRoute(
-          builder: (_) => Scaffold(
-            body: Center(
-              child: Text('No route defined for ${settings.name}'),
-            ),
-          ),
+          builder: (_) => OnBoardingScreen(),
         );
     }
   }
