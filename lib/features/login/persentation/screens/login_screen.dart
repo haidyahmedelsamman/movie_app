@@ -15,7 +15,7 @@ class LoginScreen extends StatelessWidget {
         children: [
           const Spacer(),
           AppTextButton(
-            buttonText: "Login With Password ",
+            buttonText: "Login With email and Password ",
             textStyle: TextStyles.font18DarkGreyMedium,
             onPressed: () {
               context.pushReplacementNamed(Routes.homeScreen);
