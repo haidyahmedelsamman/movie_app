@@ -12,7 +12,7 @@ class OnBoardingScreen extends StatelessWidget {
         OnBoardingPageView(
           controller: controller,
         ),
-        OnBoardingTextAndButton(
+        OnBoardingIndicatorAndButton(
           controller: controller,
         ),
       ],
