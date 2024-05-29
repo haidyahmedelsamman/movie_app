@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/features/home/ui/home_screen.dart';
-import 'package:movie_app/features/login/ui/login_screen.dart';
-import 'package:movie_app/features/on_boarding/on_boarding_screen.dart';
+import 'package:movie_app/features/home/persintation/screens/home_screen.dart';
+import 'package:movie_app/features/login/persentation/screens/login_screen.dart';
+import 'package:movie_app/features/on_boarding/persentation/screens/on_boarding_screen.dart';
 import 'routes.dart';
 
 class AppRouter {
@@ -9,7 +9,7 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) => const OnBoardingScreen(),
+          builder: (_) => OnBoardingScreen(),
         );
 
       case Routes.loginScreen:
