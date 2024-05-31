@@ -1,5 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
+import 'package:movie_app/core/widgets/app_background_screens.dart';
 import 'package:movie_app/features/on_boarding/data/models/page_view_content.dart';
 import '../../../../config/theme/styles.dart';
 
@@ -19,22 +20,8 @@ class OnBoardingPageView extends StatelessWidget {
         return Stack(
           fit: StackFit.expand,
           children: [
-            Container(
-              foregroundDecoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [
-                    Colors.black,
-                    Colors.black.withOpacity(0.3),
-                  ],
-                  begin: Alignment.bottomCenter,
-                  end: Alignment.topCenter,
-                  stops: const [0.2, 0.6],
-                ),
-              ),
-              child: Image.asset(
-                pagesList[index].pageImage,
-                fit: BoxFit.fill,
-              ),
+            AppBackgroundScreens(
+              backgroundImage: pagesList[index].pageImage,
             ),
             Container(
               alignment: const Alignment(0, .5),

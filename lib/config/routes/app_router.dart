@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/features/home/persintation/screens/home_screen.dart';
-import 'package:movie_app/features/login/persentation/screens/login_screen.dart';
-import 'package:movie_app/features/on_boarding/persentation/screens/on_boarding_screen.dart';
+import '../../features/home/persintation/screens/home_screen.dart';
+import '../../features/login/persentation/screens/login_screen.dart';
+import '../../features/on_boarding/persentation/screens/on_boarding_screen.dart';
 import 'routes.dart';
 
 class AppRouter {

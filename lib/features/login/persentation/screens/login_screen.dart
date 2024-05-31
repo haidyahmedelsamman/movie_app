@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/config/routes/routes.dart';
-import 'package:movie_app/config/theme/styles.dart';
-import 'package:movie_app/core/utils/extentions.dart';
-import 'package:movie_app/core/widgets/app_text_button.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../../../../config/theme/styles.dart';
+import '../../../../core/widgets/app_background_screens.dart';
+import '../../../../core/widgets/app_text_button.dart';
+import '../widgets/email_and_password_form.dart';
+
+import '../widgets/countinue_with_google.dart';
+import '../widgets/register_text.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -10,18 +14,46 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: Stack(
+        fit: StackFit.expand,
         children: [
-          const Spacer(),
-          AppTextButton(
-            buttonText: "Login With email and Password ",
-            textStyle: TextStyles.font18DarkGreyMedium,
-            onPressed: () {
-              context.pushReplacementNamed(Routes.homeScreen);
-            },
+          const AppBackgroundScreens(
+            backgroundImage: "assets/images/background_screen.png",
           ),
-          const Spacer(),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              SizedBox(
+                height: 20.h,
+              ),
+              Container(
+                alignment: Alignment.center,
+                child: Text(
+                  "Login To Your Account",
+                  style: TextStyles.font32WhiteMedium
+                      .copyWith(decoration: TextDecoration.none),
+                ),
+              ),
+              SizedBox(
+                height: 8.h,
+              ),
+              EmailAndPasswordForm(),
+              SizedBox(
+                height: 12.h,
+              ),
+              AppTextButton(
+                buttonText: "Login With Password",
+                textStyle: TextStyles.font18DarkGreyMedium,
+                onPressed: () {},
+              ),
+              const CountinueWithGoogle(),
+              const RegisterText(),
+              SizedBox(
+                height: 30.h,
+              ),
+            ],
+          ),
         ],
       ),
     );

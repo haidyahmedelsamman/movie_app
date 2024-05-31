@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../config/theme/colors.dart';
 
 class AppTextButton extends StatelessWidget {
@@ -34,7 +35,7 @@ class AppTextButton extends StatelessWidget {
       ),
       child: TextButton(
         style: ButtonStyle(
-          fixedSize: MaterialStateProperty.all(
+          fixedSize: WidgetStateProperty.all(
             Size(300.w, 44.h),
           ),
         ),
